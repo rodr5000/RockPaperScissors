@@ -1,0 +1,17 @@
+The Problem : Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
+
+Understanding : its a game that will get the input of "Rock" "paper" or "Scissors" from the player
+and the computer will pick one randomly and the win will be declerd by this digram: 
+Rock->Scissors->paper->Rock.
+for each win of the player we will keep track.
+
+pseodou code: 
+the player will input Rock paper or Scissors.
+the system will choose one of the options at random.
+if player choose rock and system choose Scissors player wins
+if player choose Scissors and system choose paper player wins
+if player choose paper and system choose rock player wins
+if player and system choose the same its a draw 
+any other senerio is a system victory
+the system will count and show the number of times the player wins
+
