@@ -7,12 +7,15 @@
 </head>
 <body>
     <script>
-        console.log("Hello World")
+        console.log("Hello World");
+        let choice = getComputerChoice();
+        console.log(choice);
 
         function getComputerChoice()
         {
-            const choices = ["Rock , Paper , Scissors"];
-            let num = Math.floor(Math.random()*3);
+            const choices = ["Rock" , "Paper" , "Scissors"];
+            let num = Math.floor(Math.random()*choices.length);
+
             return choices[num]; 
         }
     </script>
