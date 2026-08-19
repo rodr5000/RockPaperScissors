@@ -8,15 +8,15 @@
 <body>
     <script>
         console.log("Hello World");
-        let choicePC = getComputerChoice();
-        console.log(choicePC);
+        let choicePC;
 
-        let playerChoice = getPlayerChoice();
-        console.log(playerChoice);
+        let playerChoice;
 
         let scorePC = 0;
         let scorePlayer = 0;
-        console.log(alert(PlayRound()));
+
+        console.log(alert(PlayGame()));
+
 
         function getComputerChoice()
         {
@@ -38,8 +38,8 @@
         }
         function PlayRound()
         {
-            playerChoice = playerChoice.toLowerCase();
-            choicePC = choicePC.toLowerCase();
+            playerChoice = getPlayerChoice().toLowerCase();
+            choicePC = getComputerChoice().toLowerCase();
             let result;
 
             if((playerChoice === 'rock' && choicePC === 'paper') ||
@@ -60,6 +60,29 @@
                 result = "you choose: " + playerChoice +" the system choose: "+ choicePC +" therfor you WIN!!! the score is : " + scorePlayer + '-' + scorePC;
               }
               return result;
+        }
+
+        function PlayGame()
+        {
+            let winner;
+            for(let i = 0; i<=4; i++)
+            {
+                console.log(alert(PlayRound()));
+            }
+            if (scorePC > scorePlayer)
+            {
+                Winner = 'THE WINNER OF THE GAME IS THE SYSTEM!!!🥳🥳🥳'
+            }
+            else if(scorePC === scorePlayer)
+            {
+                Winner = 'THE GAME ENDED IN A DRAW!!!'
+            }
+            else
+            {
+                Winner = 'CONGRUTS YOU WON THE GAME!!!🥳🥳🥳'
+            }
+            return Winner;
+            
         }
     </script>
 </body>
