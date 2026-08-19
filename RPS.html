@@ -16,6 +16,7 @@
 
         let scorePC = 0;
         let scorePlayer = 0;
+        console.log(alert(PlayRound()));
 
         function getComputerChoice()
         {
@@ -34,7 +35,31 @@
                 answ = prompt("please only pick between Rock Paper or Scissors!! ")
             }
             return answ;
+        }
+        function PlayRound()
+        {
+            playerChoice = playerChoice.toLowerCase();
+            choicePC = choicePC.toLowerCase();
+            let result;
 
+            if((playerChoice === 'rock' && choicePC === 'paper') ||
+              (playerChoice ==='paper' && choicePC ==='scissors') || 
+              (playerChoice === 'scissors' && choicePC ==='rock'))
+              {
+                scorePC++;
+                result = "you choose: " + playerChoice +" the system choose: "+ choicePC +" therfor you LOOSE!!! the score is : " + scorePlayer + '-' + scorePC;
+              }
+              else if (playerChoice === choicePC)
+              {
+                 result ="you choose: " + playerChoice +" the system choose: "+ choicePC +" therfor its a DRAW!!! the score is : " + scorePlayer + '-' + scorePC;
+
+              } 
+              else
+              {
+                scorePlayer++;
+                result = "you choose: " + playerChoice +" the system choose: "+ choicePC +" therfor you WIN!!! the score is : " + scorePlayer + '-' + scorePC;
+              }
+              return result;
         }
     </script>
 </body>
