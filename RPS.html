@@ -9,7 +9,7 @@
     <script>
         console.log("Hello World");
         let choicePC = getComputerChoice();
-        console.log(choice);
+        console.log(choicePC);
 
         let playerChoice = getPlayerChoice();
         console.log(playerChoice);
@@ -23,12 +23,12 @@
         }
         function getPlayerChoice()
         {
-            let answ = prompt(console.log("Choose between Rock Paper or Scissors "));
-            while(answ.toLowerCase() != rock || 
-            answ.toLowerCase() != paper || 
-            answ.toLowerCase() != scissors )
+            let answ = prompt("Choose between Rock Paper or Scissors ");
+            while(answ.toLowerCase() != "rock" &&
+            answ.toLowerCase() != "paper" &&
+            answ.toLowerCase() != "scissors" )
             {
-                answ = prompt(console.log("please only pick between Rock Paper or Scissors!! "))
+                answ = prompt("please only pick between Rock Paper or Scissors!! ")
             }
             return answ;
 
